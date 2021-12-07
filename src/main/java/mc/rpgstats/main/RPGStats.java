@@ -42,6 +42,7 @@ public class RPGStats implements ModInitializer {
         }
         if (CustomComponents.components.containsKey(id)) {
             CustomComponents.STATS.get(player).getOrCreateID(id).setXp(newValue);
+            CustomComponents.STATS.sync(player);
         }
     }
     
