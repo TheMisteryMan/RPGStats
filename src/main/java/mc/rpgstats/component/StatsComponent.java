@@ -1,6 +1,6 @@
 package mc.rpgstats.component;
 
-import dev.onyxstudios.cca.api.v3.component.Component;
+import dev.onyxstudios.cca.api.v3.component.sync.AutoSyncedComponent;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.Identifier;
@@ -8,7 +8,7 @@ import net.minecraft.util.Identifier;
 import java.util.HashMap;
 import java.util.Objects;
 
-public class StatsComponent implements Component {
+public class StatsComponent implements AutoSyncedComponent {
     private final PlayerEntity playerEntity;
     
     public HashMap<Identifier, StatsEntry> entries = new HashMap<>();
