@@ -18,10 +18,11 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
-import wraith.harvest_scythes.ScytheTool;
+import wraith.harvest_scythes.item.ScytheItem;
 
 @Pseudo
-@Mixin(ScytheTool.class)
+//@Mixin(value = ScytheTool.class, remap = false)
+@Mixin(ScytheItem.class)
 public class GrantFarmingOnUseScytheMixin {
     @Inject(method = "harvest",
         at = @At(value = "RETURN",
